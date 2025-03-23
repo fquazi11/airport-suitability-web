@@ -17,12 +17,12 @@ export function Button({
   disabled,
   ...props
 }: ButtonProps) {
-  const baseStyles = 'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50'
+  const baseStyles = 'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-green-400 dark:bg-white'
   
   const variants = {
-    primary: 'bg-white-600 text-black bg-white hover:bg-white/90',
+    primary: 'bg-green-600 text-black bg-white hover:bg-white/90 dark:bg-white-600',
     secondary: 'bg-white-600 text-black bg-white hover:bg-white/80',
-    outline: 'border border-input bg-white border-black-300 text-black bg-white hover:bg-white hover:text-accent-foreground',
+    outline: 'border border-input bg-green-600 border-black-300 text-black dark:bg-white hover:bg-white hover:text-accent-foreground',
     ghost: 'hover:bg-white hover:text-accent-foreground text-gray-700 hover:bg-white-100'
   }
 
