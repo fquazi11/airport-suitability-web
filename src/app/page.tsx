@@ -33,9 +33,11 @@ export default function HomePage() {
             </Button>
           </div>
           <div className="border p-4 rounded-lg">
-            <h3 className="text-2xl font-semibold">MEL Manager</h3>
-            <p>Issue and revise MELs quickly and efficiently.</p>
-            <Button variant="outline" className="mt-2">Discover MEL Manager</Button>
+            <h3 className="text-2xl font-semibold">Products</h3>
+            <p>AI-Powered Products for the aviation domain.</p>
+            <Button variant="outline" className="mt-2">
+              <Link href="/products">Discover Products</Link>
+            </Button>
           </div>
         </div>
       </section>
