@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@module-federation/nextjs-mf": "^8.8.19",
     "@tailwindcss/postcss": "^4.0.14",
     "@types/leaflet": "^1.9.16",
     "@types/node": "^20",
