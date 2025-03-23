@@ -18,7 +18,9 @@ export default function HomePage() {
         <p className="text-lg mt-4">
           Optimize Your Flight Planning with AI-Powered Airport Suitability Analysis.
         </p>
-        <Button variant="primary" className="mt-4">Get in Touch</Button>
+        <Button variant="outline" className="mt-4">
+              <Link href="/partners">Get in Touch</Link>
+            </Button>
       </section>
 
       {/* Products and Services Section */}
