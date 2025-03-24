@@ -28,6 +28,10 @@ const nextConfig = {
     }
     return config;
   },
+  output: 'export', // Enable static export
+  trailingSlash: true,
+  images: { unoptimized: true }, // Disable Next.js image optimization for static hosting
+  basePath: "/my-github-page", // Change this to your repo name,
 };
 
 module.exports = nextConfig; 

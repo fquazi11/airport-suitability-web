@@ -1,12 +1,14 @@
-import Image from "next/image";
+// import Image from "next/image";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import LeafletMap from "@/components/maps/LeafletMap";
-import { Button } from "@/components/ui/Button";
-import { motion } from "framer-motion";
+import Button from "@/components/ui/Button";
+// import { motion } from "framer-motion";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import Link from "next/link";
 
-export default function HomePage() {
+const AirportSuitability = () => {
   return (
+    <ThemeProvider>
     <main className="min-h-screen p-8 transition-colors dark:bg-gray-90">
       <div className="fixed top-4 right-4">
         <ThemeToggle />
@@ -44,7 +46,7 @@ export default function HomePage() {
         <h2 className="text-4xl font-bold text-center">How It Works</h2>
         <div className="mt-6">
           <h3 className="text-2xl font-semibold">1. AI-Powered Airport Scoring</h3>
-          <p>We analyze <strong>over 100 parameters</strong> to determine an airport's suitability for your operations, including:</p>
+          <p>We analyze <strong>over 100 parameters</strong> to determine an airport&apos;s suitability for your operations, including:</p>
           <ul className="list-disc list-inside mt-2">
             <li>Runway length & surface condition</li>
             <li>Weather patterns & historical delays</li>
@@ -120,5 +122,8 @@ export default function HomePage() {
         <p>© 2025 AirportSuitability</p>
       </footer>
     </main>
+    </ThemeProvider>
   );
 }
+
+export default AirportSuitability;

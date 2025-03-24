@@ -1,12 +1,16 @@
-import Image from "next/image";
+import { ThemeProvider } from "../components/ThemeProvider";
+import { AppProps } from "next/app";
+// import Image from "next/image";
 import LeafletMap from "@/components/maps/LeafletMap";
-import { Button } from "@/components/ui/Button";
-import { motion } from "framer-motion";
+import Button from "@/components/ui/Button";
+// import { motion } from "framer-motion";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import Link from "next/link";
 
-export default function HomePage() {
+const HomePage = ({ Component, pageProps}: AppProps) => {
   return (
+    <ThemeProvider>
+      < Component {...pageProps} />
     <main className="min-h-screen p-8 transition-colors dark:bg-red-300">
       <div className="fixed top-4 right-4">
         <ThemeToggle />
@@ -56,5 +60,8 @@ export default function HomePage() {
 
       {/* Add additional sections: How it Works, Benefits, etc. */}
     </main>
+    </ThemeProvider>
   );
 }
+
+export default HomePage;
