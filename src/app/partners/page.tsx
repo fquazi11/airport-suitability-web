@@ -121,7 +121,9 @@ export default function PartnerPage() {
       <section className="mt-10 text-center">
         <h2 className="text-4xl font-bold">Get Started Today</h2>
         <p className="mt-4">Enhance your flight operations with <strong>AI-powered airport suitability insights</strong>. Contact us to access the <strong>Airport Suitability API</strong> and revolutionize your <strong>aviation decision-making</strong>.</p>
-        <Button variant="primary" className="mt-4">Request API Access</Button>
+        <Button variant="primary" className="mt-4">
+          <Link href="/contract">Request API Access</Link>
+        </Button>
       </section>
       <section className="mt-10">
         <LeafletMap />

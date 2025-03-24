@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen p-8 transition-colors dark:bg-gray-90">
+    <main className="min-h-screen p-8 transition-colors dark:bg-red-300">
       <div className="fixed top-4 right-4">
         <ThemeToggle />
       </div>
@@ -18,7 +18,7 @@ export default function HomePage() {
         <p className="text-lg mt-4">
           Optimize Your Flight Planning with AI-Powered Airport Suitability Analysis.
         </p>
-        <Button variant="outline" className="mt-4">
+        <Button variant="outline" className="mt-4 bg-white dark:bg-red-800">
               <Link href="/partners">Get in Touch</Link>
             </Button>
       </section>
@@ -35,8 +35,8 @@ export default function HomePage() {
             </Button>
           </div>
           <div className="border p-4 rounded-lg">
-            <h3 className="text-2xl font-semibold">Products</h3>
-            <p>AI-Powered Products for the aviation domain.</p>
+            <h3 className="text-2xl font-semibold">Upcoming Products</h3>
+            <p>AI-Powered Products for the Aviation domain.</p>
             <Button variant="outline" className="mt-2">
               <Link href="/products">Discover Products</Link>
             </Button>
