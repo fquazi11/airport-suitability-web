@@ -1,0 +1,307 @@
+{
+  "id": "airport_suitability",
+  "name": "airport_suitability",
+  "metaData": {
+    "name": "airport_suitability",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.1.0",
+      "buildName": "airport-suitability-web"
+    },
+    "remoteEntry": {
+      "name": "static/chunks/remoteEntry.js",
+      "path": "",
+      "type": "window"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "airport_suitability",
+    "pluginVersion": "0.11.0",
+    "prefetchInterface": false,
+    "publicPath": "/my-github-page/_next/"
+  },
+  "shared": [
+    {
+      "id": "airport_suitability:next/dynamic",
+      "name": "next/dynamic",
+      "version": "15.2.2",
+      "singleton": true,
+      "requiredVersion": "^15.2.2",
+      "assets": {
+        "js": {
+          "async": [
+            "static/chunks/framework.63314d8ca98cbfbe.js"
+          ],
+          "sync": [
+            "static/chunks/96.2e05e3bfc524b998.js",
+            "static/chunks/334.3604d4c925367bf4.js",
+            "static/chunks/953.2e05e3bfc524b998.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "airport_suitability:next/head",
+      "name": "next/head",
+      "version": "15.2.2",
+      "singleton": true,
+      "requiredVersion": "^15.2.2",
+      "assets": {
+        "js": {
+          "async": [
+            "static/chunks/framework.63314d8ca98cbfbe.js"
+          ],
+          "sync": [
+            "static/chunks/368.fd42f5838f7ee310.js",
+            "static/chunks/987.1d45cb7919993904.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "airport_suitability:next/image",
+      "name": "next/image",
+      "version": "15.2.2",
+      "singleton": true,
+      "requiredVersion": "^15.2.2",
+      "assets": {
+        "js": {
+          "async": [
+            "static/chunks/framework.63314d8ca98cbfbe.js"
+          ],
+          "sync": [
+            "static/chunks/965.a243bddf94704cf6.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "airport_suitability:next/link",
+      "name": "next/link",
+      "version": "15.2.2",
+      "singleton": true,
+      "requiredVersion": "^15.2.2",
+      "assets": {
+        "js": {
+          "async": [
+            "static/chunks/framework.63314d8ca98cbfbe.js"
+          ],
+          "sync": [
+            "static/chunks/106.423a19e2bbae7d88.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "airport_suitability:next/router",
+      "name": "next/router",
+      "version": "15.2.2",
+      "singleton": true,
+      "requiredVersion": "^15.2.2",
+      "assets": {
+        "js": {
+          "async": [
+            "static/chunks/framework.63314d8ca98cbfbe.js"
+          ],
+          "sync": [
+            "static/chunks/715.d27317d30578414f.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "airport_suitability:next/script",
+      "name": "next/script",
+      "version": "15.2.2",
+      "singleton": true,
+      "requiredVersion": "^15.2.2",
+      "assets": {
+        "js": {
+          "async": [
+            "static/chunks/framework.63314d8ca98cbfbe.js"
+          ],
+          "sync": [
+            "static/chunks/133.17d8029806588f36.js",
+            "static/chunks/514.3687a0d677a952a2.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "airport_suitability:react-dom/client",
+      "name": "react-dom/client",
+      "version": "19.0.0",
+      "requiredVersion": "^19.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/chunks/framework.63314d8ca98cbfbe.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "airport_suitability:react-dom",
+      "name": "react-dom",
+      "version": "19.0.0",
+      "singleton": true,
+      "requiredVersion": "^19.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/chunks/framework.63314d8ca98cbfbe.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "airport_suitability:react/jsx-runtime",
+      "name": "react/jsx-runtime",
+      "version": "19.0.0",
+      "singleton": true,
+      "requiredVersion": "^19.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/chunks/framework.63314d8ca98cbfbe.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "airport_suitability:react",
+      "name": "react",
+      "version": "19.0.0",
+      "singleton": true,
+      "requiredVersion": "^19.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/chunks/framework.63314d8ca98cbfbe.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "airport_suitability:styled-jsx/style",
+      "name": "styled-jsx/style",
+      "version": "5.1.6",
+      "singleton": true,
+      "requiredVersion": "^5.1.6",
+      "assets": {
+        "js": {
+          "async": [
+            "static/chunks/framework.63314d8ca98cbfbe.js"
+          ],
+          "sync": [
+            "static/chunks/187.e4c452cb41fccf4d.js",
+            "static/chunks/568.e4c452cb41fccf4d.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "airport_suitability:styled-jsx",
+      "name": "styled-jsx",
+      "version": "5.1.6",
+      "singleton": true,
+      "requiredVersion": "^5.1.6",
+      "assets": {
+        "js": {
+          "async": [
+            "static/chunks/framework.63314d8ca98cbfbe.js"
+          ],
+          "sync": [
+            "static/chunks/197.d74fd86155f79561.js",
+            "static/chunks/578.d74fd86155f79561.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    }
+  ],
+  "remotes": [
+    {
+      "federationContainerName": "airport_suitability",
+      "moduleName": "UNKNOWN",
+      "alias": "airport_suitability",
+      "entry": "http://localhost:3000/_next/static/chunks/remoteEntry.js"
+    }
+  ],
+  "exposes": [
+    {
+      "id": "airport_suitability:ThemeProvider",
+      "name": "ThemeProvider",
+      "assets": {
+        "js": {
+          "sync": [
+            "static/chunks/__federation_expose_ThemeProvider.1e6976ec054c11cb.js"
+          ],
+          "async": [
+            "static/chunks/framework.63314d8ca98cbfbe.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      },
+      "path": "./ThemeProvider"
+    }
+  ]
+}
