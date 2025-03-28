@@ -1,10 +1,12 @@
+import { ThemeProvider } from "@/components/ThemeProvider";
 import Link from "next/link"; // Import Link from Next.js
-import { Button } from "@/components/ui/Button"; // Assuming you have a Button component
-import LeafletMap from "@/components/maps/LeafletMap";
+import Button from "@/components/ui/Button"; // Assuming you have a Button component
 import { ThemeToggle } from "@/components/ThemeToggle";
+import LeafletMap from "@/components/maps/LeafletMap";
 
-export default function AirportSuitabilityAPI() {
+const PartnerPage = () => {
   return (
+      <ThemeProvider>
     <main className="min-h-screen p-8 transition-colors dark:bg-gray-90">
       <div className="fixed top-4 right-4">
         <ThemeToggle />
@@ -15,7 +17,6 @@ export default function AirportSuitabilityAPI() {
           Back to Home
         </Link>
       </section>
-
       {/* Product Title Section */}
       <section className="mb-10 text-center">
         <h1 className="text-6xl font-bold">Airport Suitability API</h1>
@@ -87,11 +88,44 @@ export default function AirportSuitabilityAPI() {
         </ul>
       </section>
 
+      {/* Partner Section */}
+      <section className="mt-10">
+        <h2 className="text-4xl font-bold text-center">Partner with Us</h2>
+        <h3 className="text-2xl font-semibold mt-4">Join Our Network of Aviation Innovators</h3>
+        <p className="mt-4">
+          We collaborate with leading <strong>airlines, airports, aviation software providers, and research institutions</strong> to enhance the future of airport suitability analysis. Our partner ecosystem enables seamless <strong>technology integration, innovation, and joint development</strong>.
+        </p>
+
+        <h3 className="text-2xl font-semibold mt-6">Why Partner with Us?</h3>
+        <ul className="list-disc list-inside mt-2">
+          <li>Access to <strong>cutting-edge AI-driven aviation solutions</strong>.</li>
+          <li><strong>Seamless integration</strong> with existing aviation planning tools.</li>
+          <li>Collaborative <strong>research and development opportunities</strong>.</li>
+          <li><strong>Early access to new API features and data insights</strong>.</li>
+        </ul>
+
+        <h3 className="text-2xl font-semibold mt-6">Who Can Partner?</h3>
+        <ul className="list-disc list-inside mt-2">
+          <li><strong>Airlines & Airports</strong> looking for <strong>AI-powered optimization</strong>.</li>
+          <li><strong>Aviation Software Developers</strong> building <strong>next-gen planning tools</strong>.</li>
+          <li><strong>Regulatory Bodies & Air Navigation Service Providers</strong>.</li>
+          <li><strong>Academic & Research Institutions</strong> driving aviation technology innovation.</li>
+        </ul>
+
+        <h3 className="text-2xl font-semibold mt-6">Let’s Build the Future of Airport Suitability Together</h3>
+        <p className="mt-4">
+          Join us in creating smarter, data-driven aviation solutions. Contact us to discuss partnership opportunities and explore how we can work together to transform <strong>airport suitability analysis</strong>.
+        </p>
+        <Button variant="primary" className="mt-4">Become a Partner</Button>
+      </section>
+
       {/* Call to Action Section */}
       <section className="mt-10 text-center">
         <h2 className="text-4xl font-bold">Get Started Today</h2>
         <p className="mt-4">Enhance your flight operations with <strong>AI-powered airport suitability insights</strong>. Contact us to access the <strong>Airport Suitability API</strong> and revolutionize your <strong>aviation decision-making</strong>.</p>
-        <Button variant="primary" className="mt-4">Request API Access</Button>
+        <Button variant="primary" className="mt-4">
+          <Link href="/contract">Request API Access</Link>
+        </Button>
       </section>
       <section className="mt-10">
         <LeafletMap />
@@ -104,5 +138,8 @@ export default function AirportSuitabilityAPI() {
       </footer>
     
     </main>
+    </ThemeProvider>
   );
 }
+
+export default PartnerPage;

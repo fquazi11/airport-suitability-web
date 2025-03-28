@@ -1,17 +1,23 @@
-const NextFederationPlugin = require('@module-federation/nextjs-mf');
+/** @type {import('next').NextConfig} */
+const { NextFederationPlugin } = require('@module-federation/nextjs-mf');
+
+const isProduction = process.env.NODE_ENV === 'production';
+const repository = 'airport-suitability-web'; // Replace with your repository name
 
 const nextConfig = {
-  webpack(config, options) {
-    if (!options.isServer) {
+  reactStrictMode: true,
+  basePath: isProduction ? `/${repository}` : '',
+  assetPrefix: isProduction ? `/${repository}/` : '',
+  images: { unoptimized: true },
+  output: 'export',
+  webpack(config, { isServer }) {
+    if (!isServer) {
       config.plugins.push(
         new NextFederationPlugin({
           name: 'airport_suitability',
           filename: 'static/chunks/remoteEntry.js',
           exposes: {
             './ThemeProvider': './src/components/ThemeProvider.tsx',
-          },
-          remotes: {
-            airport_suitability: `airport_suitability@http://localhost:3000/_next/static/chunks/remoteEntry.js`,
           },
           shared: {
             react: {
