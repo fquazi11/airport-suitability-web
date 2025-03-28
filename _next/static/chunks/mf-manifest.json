@@ -20,9 +20,9 @@
       "api": ""
     },
     "globalName": "airport_suitability",
-    "pluginVersion": "0.11.0",
+    "pluginVersion": "0.11.2",
     "prefetchInterface": false,
-    "publicPath": "/my-github-page/_next/"
+    "publicPath": "/out/_next/"
   },
   "shared": [
     {
@@ -37,9 +37,9 @@
             "static/chunks/framework.63314d8ca98cbfbe.js"
           ],
           "sync": [
-            "static/chunks/96.2e05e3bfc524b998.js",
-            "static/chunks/334.3604d4c925367bf4.js",
-            "static/chunks/953.2e05e3bfc524b998.js"
+            "static/chunks/96.bab2fb4eaa5614fb.js",
+            "static/chunks/334.9b67f49ea3eceb55.js",
+            "static/chunks/953.9b67f49ea3eceb55.js"
           ]
         },
         "css": {
@@ -60,7 +60,7 @@
             "static/chunks/framework.63314d8ca98cbfbe.js"
           ],
           "sync": [
-            "static/chunks/368.fd42f5838f7ee310.js",
+            "static/chunks/368.6be905334198c8f5.js",
             "static/chunks/987.1d45cb7919993904.js"
           ]
         },
@@ -82,7 +82,7 @@
             "static/chunks/framework.63314d8ca98cbfbe.js"
           ],
           "sync": [
-            "static/chunks/965.a243bddf94704cf6.js"
+            "static/chunks/965.6c14fc81e0f2c991.js"
           ]
         },
         "css": {
@@ -103,7 +103,7 @@
             "static/chunks/framework.63314d8ca98cbfbe.js"
           ],
           "sync": [
-            "static/chunks/106.423a19e2bbae7d88.js"
+            "static/chunks/106.f99058de3091974f.js"
           ]
         },
         "css": {
@@ -124,7 +124,7 @@
             "static/chunks/framework.63314d8ca98cbfbe.js"
           ],
           "sync": [
-            "static/chunks/715.d27317d30578414f.js"
+            "static/chunks/715.f4875379f1a00644.js"
           ]
         },
         "css": {
@@ -145,8 +145,8 @@
             "static/chunks/framework.63314d8ca98cbfbe.js"
           ],
           "sync": [
-            "static/chunks/133.17d8029806588f36.js",
-            "static/chunks/514.3687a0d677a952a2.js"
+            "static/chunks/133.2cba5584904fe481.js",
+            "static/chunks/514.7f22d36923627111.js"
           ]
         },
         "css": {
