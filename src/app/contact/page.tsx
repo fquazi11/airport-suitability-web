@@ -52,7 +52,7 @@ export default function ContactPage() {
               Get in Touch
             </h1>
             <p className="text-gray-300 text-xl">
-              Have questions about our AI-powered aviation solutions? We're here to help.
+              Have questions about our AI-powered aviation solutions? We&apos;re here to help.
             </p>
           </div>
 
