@@ -1,124 +1,177 @@
-import Image from "next/image";
-import LeafletMap from "@/components/maps/LeafletMap";
-import { Button } from "@/components/ui/Button";
-import { motion } from "framer-motion";
+'use client'
+
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { Button } from '@/components/ui/Button';
 import { ThemeToggle } from "@/components/ThemeToggle";
 import Link from "next/link";
 
-export default function HomePage() {
+const AirportSuitability = () => {
   return (
-    <main className="min-h-screen p-8 transition-colors dark:bg-gray-90">
+    <div className="min-h-screen bg-gray-50">
       <div className="fixed top-4 right-4">
         <ThemeToggle />
       </div>
 
       {/* Back Button Section */}
-      <section className="mb-10 text-center">
-        <Link href="/" className="text-blue-500 underline">
-          Back to Home
+      <section className="fixed top-8 left-8 z-50">
+        <Link href="/">
+          <motion.div
+            className="group flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-primary transition-colors bg-white/80 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl"
+            whileHover={{ x: -5 }}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <svg 
+              className="w-5 h-5 transform transition-transform group-hover:-translate-x-1" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+            <span className="font-medium">Back to Home</span>
+          </motion.div>
         </Link>
       </section>
 
       {/* Hero Section */}
-      <section className="mb-10 text-center">
-        <h1 className="text-8xl font-bold">Airport Suitability Solution</h1>
-        <p className="text-lg mt-4">
-          Optimize Your Flight Planning with AI-Powered Airport Suitability Analysis.
-        </p>
-        <Button variant="primary" className="mt-4">Get in Touch</Button>
-      </section>
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="relative w-full h-full">
+            <Image
+              src="/images/airport-hero.jpg"
+              alt="Airport Background"
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+          </div>
+        </div>
 
-      {/* Maximize Efficiency Section */}
-      <section className="mt-10 text-center">
-        <h2 className="text-4xl font-bold">Maximize Efficiency, Minimize Risk</h2>
-        <p className="mt-4">
-          Airport suitability is critical for <strong>flight planning, cargo operations, and airline route optimization</strong>. Our <strong>AI-driven airport suitability solution</strong> provides real-time insights into airport performance, infrastructure constraints, regulatory compliance, and operational risks.
-        </p>
-        <p className="mt-4">
-          Harness the power of <strong>machine learning, geospatial intelligence, and historical performance analysis</strong> to make informed airport selection decisions.
-        </p>
-      </section>
-
-      {/* How It Works Section */}
-      <section className="mt-10">
-        <h2 className="text-4xl font-bold text-center">How It Works</h2>
-        <div className="mt-6">
-          <h3 className="text-2xl font-semibold">1. AI-Powered Airport Scoring</h3>
-          <p>We analyze <strong>over 100 parameters</strong> to determine an airport's suitability for your operations, including:</p>
-          <ul className="list-disc list-inside mt-2">
-            <li>Runway length & surface condition</li>
-            <li>Weather patterns & historical delays</li>
-            <li>Ground handling & cargo infrastructure</li>
-            <li>Regulatory restrictions & NOTAMs</li>
-            <li>Fuel availability & pricing trends</li>
-          </ul>
-          <p className="mt-2">Each airport receives an <strong>AI-calculated suitability score</strong>, helping airlines and operators make data-driven choices.</p>
-
-          <h3 className="text-2xl font-semibold mt-6">2. Real-Time Geospatial Mapping</h3>
-          <ul className="list-disc list-inside mt-2">
-            <li>Integrates with GeoServer to provide interactive airport suitability maps.</li>
-            <li>Live NOTAMs & METAR data for up-to-date operational conditions.</li>
-            <li>Predictive congestion models to forecast airspace and ground delays.</li>
-          </ul>
-
-          <h3 className="text-2xl font-semibold mt-6">3. Dynamic Weather & Risk Analysis</h3>
-          <ul className="list-disc list-inside mt-2">
-            <li>AI models predict turbulence, storms, and crosswind risks affecting airport operations.</li>
-            <li>Real-time alerts for adverse conditions impacting approach and departure.</li>
-            <li>Automated alternate airport recommendations in case of disruptions.</li>
-          </ul>
-
-          <h3 className="text-2xl font-semibold mt-6">4. Cargo & Fuel Optimization</h3>
-          <ul className="list-disc list-inside mt-2">
-            <li>Optimize cargo operations by selecting airports with the best handling facilities.</li>
-            <li>Fuel tankering strategies based on real-time price fluctuations and operational costs.</li>
-            <li>AI-driven cost simulations for strategic airport selection.</li>
-          </ul>
+        <div className="relative z-10 max-w-6xl mx-auto px-4 text-center text-white">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
+              Airport Suitability Analysis
+            </h1>
+            
+            <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-gray-200">
+              Make informed decisions with our comprehensive airport analysis tools
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      {/* Who Benefits Section */}
-      <section className="mt-10 text-center">
-        <h2 className="text-4xl font-bold">Who Benefits?</h2>
-        <div className="mt-6">
-          <h3 className="text-2xl font-semibold">Airlines & Cargo Operators</h3>
-          <p>Reduce delays and improve operational efficiency. Identify cost-effective refueling and cargo handling locations.</p>
-
-          <h3 className="text-2xl font-semibold mt-4">Business Aviation & Charter Services</h3>
-          <p>Optimize airport selection for private flights. Ensure seamless executive travel with AI-driven recommendations.</p>
-
-          <h3 className="text-2xl font-semibold mt-4">Flight Dispatch & Operations Teams</h3>
-          <p>Make data-backed decisions on airport suitability. Minimize risks associated with weather and infrastructure limitations.</p>
+      {/* Features Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.2 }}
+                className="p-6 rounded-lg shadow-lg bg-white"
+              >
+                <div className="text-primary mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Technology & Data Sources Section */}
-      <section className="mt-10">
-        <h2 className="text-4xl font-bold text-center dark:text-white">Technology & Data Sources</h2>
-        <ul className="list-disc list-inside mt-6">
-          <li>GeoServer & PostGIS for real-time spatial analysis.</li>
-          <li>Machine learning models for airport suitability scoring.</li>
-          <li>Integration with global NOTAMs, METAR/TAF, and ADS-B data.</li>
-          <li>Predictive analytics powered by AI-driven simulations.</li>
-        </ul>
+      {/* Analysis Tools Section */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Analysis Tools</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {tools.map((tool, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                className="bg-white p-6 rounded-lg shadow-lg"
+              >
+                <h3 className="text-xl font-semibold mb-4">{tool.title}</h3>
+                <p className="text-gray-600 mb-4">{tool.description}</p>
+                <Button variant="outline" className="mt-2">Learn More</Button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </section>
 
-      {/* Call to Action Section */}
-      <section className="mt-10 text-center">
-        <h2 className="text-4xl font-bold dark:text-white">Ready to Optimize Your Flight Operations?</h2>
-        <p className="mt-4">Get in touch with us to explore how our <strong>AI-powered Airport Suitability solution</strong> can enhance your <strong>flight planning, cargo operations, and cost efficiency</strong>.</p>
-        <Button variant="primary" className="mt-4">Contact us today!</Button>
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-primary text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+          <p className="text-lg mb-8">
+            Join us in revolutionizing airport suitability analysis with AI-powered insights.
+          </p>
+          <Button 
+            variant="secondary"
+            className="px-8 py-4 text-lg rounded-full hover:scale-105 transition-transform"
+          >
+            Start Analysis
+          </Button>
+        </div>
       </section>
-
-      <section className="mt-10">
-        <LeafletMap />
-      </section>
-
-      {/* Footer Section */}
-      <footer className="mt-10 text-center">
-        <p>Contact us at: info@airportsuitability.com</p>
-        <p>© 2025 AirportSuitability</p>
-      </footer>
-    </main>
+    </div>
   );
-}
+};
+
+// Feature data
+const features = [
+  {
+    icon: <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/></svg>,
+    title: "Real-time Analysis",
+    description: "Get instant insights into airport suitability with our advanced AI algorithms."
+  },
+  {
+    icon: <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/></svg>,
+    title: "Collaborative Planning",
+    description: "Work together with your team to make informed decisions about airport operations."
+  },
+  {
+    icon: <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"/><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"/></svg>,
+    title: "Data Visualization",
+    description: "View comprehensive data visualizations and reports for better decision-making."
+  }
+];
+
+// Tools data
+const tools = [
+  {
+    title: "Runway Analysis",
+    description: "Evaluate runway conditions, length requirements, and safety parameters."
+  },
+  {
+    title: "Weather Impact",
+    description: "Assess weather patterns and their impact on airport operations."
+  },
+  {
+    title: "Traffic Analysis",
+    description: "Analyze air traffic patterns and capacity utilization."
+  },
+  {
+    title: "Safety Assessment",
+    description: "Comprehensive safety analysis based on multiple parameters."
+  }
+];
+
+export default AirportSuitability;
