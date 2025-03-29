@@ -53,7 +53,7 @@ export default function PartnerPage() {
       </section>
 
       {/* Partnership Benefits */}
-      <section className="py-20 px-8">
+      <section className="pt-40 pb-20 px-8">
         <div className="max-w-6xl mx-auto">
           <motion.div 
             className="grid md:grid-cols-3 gap-8"

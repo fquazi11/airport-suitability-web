@@ -7,6 +7,7 @@ const MapContainer = dynamic(() => import('react-leaflet').then(mod => mod.MapCo
 const TileLayer = dynamic(() => import('react-leaflet').then(mod => mod.TileLayer), { ssr: false });
 const Marker = dynamic(() => import('react-leaflet').then(mod => mod.Marker), { ssr: false });
 const Popup = dynamic(() => import('react-leaflet').then(mod => mod.Popup), { ssr: false });
+const ZoomControl = dynamic(() => import('react-leaflet').then(mod => mod.ZoomControl), { ssr: false });
 
 interface LeafletMapProps {
   className?: string;
@@ -69,9 +70,13 @@ const LeafletMap = ({ className }: LeafletMapProps) => {
       <MapContainer 
         center={[51.505, -0.09]} 
         zoom={5} 
+        minZoom={3}
+        maxZoom={18}
         className={`w-full h-[600px] rounded-xl shadow-xl ${className || ''}`}
         style={{ background: '#1a1a1a' }}
+        zoomControl={false}
       >
+        <ZoomControl position="bottomright" />
         <TileLayer
           url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
